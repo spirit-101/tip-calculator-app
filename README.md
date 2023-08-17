@@ -1,4 +1,4 @@
-![Frontend Mentor Design](/design/desktop-design.jpg)
+![Frontend Mentor Design](/design/desktop-design-completed.jpg)
 
 <h1 align="center">Tip Calculator App</h1>
 
@@ -6,7 +6,7 @@
 
 🌐 [View the live site](https://spirit-101.github.io/tip-calculator-app/)
 
-🧠 [Check out the solution](https://www.frontendmentor.io/solutions/age-calculator-app-2oUrVdgMo_)
+🧠 [Check out the solution](https://www.frontendmentor.io/solutions/tip-calculator-app-HBJLjwxlx5)
 
 📝 [View the challenge](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
 
