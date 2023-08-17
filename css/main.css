@@ -123,6 +123,7 @@ label {
   margin-bottom: 3.375rem;
 }
 .tip__btn-box-label {
+  font-size: 1rem;
   display: block;
   margin-bottom: 0.625rem;
   color: hsl(186, 14%, 43%);
