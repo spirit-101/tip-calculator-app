@@ -1,0 +1,251 @@
+@use "sass:math";
+
+// RESETS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+// PIXEL -> REM (FUNC)
+$html-font-size: 16px;
+@function stripUnit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+@function rem($pxValue) {
+  @return #{math.div(stripUnit($pxValue), stripUnit($html-font-size))}rem;
+}
+
+/////// VARIABLES
+
+$Strong-cyan: hsl(172, 67%, 45%);
+
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+//////////////////////////////////////////
+
+// STYLING
+body {
+  font-family: "Space Mono", sans-serif;
+  line-height: 1.1;
+  min-height: 100vh;
+
+  background-color: $light-grayish-cyan;
+
+  display: grid;
+  place-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+#num-people,
+#bill-amount {
+  outline: 1px solid $light-grayish-cyan;
+}
+
+.heading {
+  &__secondary {
+    color: $very-light-grayish-cyan;
+    font-size: rem(16px);
+
+    & span {
+      color: $grayish-cyan;
+      font-size: rem(14px);
+    }
+  }
+}
+
+label {
+  color: $dark-grayish-cyan;
+}
+
+.container {
+  max-width: rem(1300px);
+  margin: 0 auto;
+  background-color: $white;
+
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: rem(54px);
+  padding: rem(40px);
+  border-radius: rem(22px);
+}
+
+.tip {
+  &__input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(30px);
+    position: relative;
+
+    & input {
+      background-color: $very-light-grayish-cyan;
+      padding: rem(10px);
+      border-radius: 6px;
+      text-align: right;
+      width: 100%;
+      margin-top: rem(8px);
+    }
+  }
+
+  &__custom {
+    width: rem(100px);
+    text-align: center;
+    background-color: $very-light-grayish-cyan;
+    border-radius: 6px;
+  }
+}
+
+.tip__input-container__icon {
+  height: 1rem;
+  position: absolute;
+  left: 1rem;
+
+  bottom: 0.7rem;
+}
+
+.tip__btn-box {
+  margin-bottom: rem(54px);
+
+  &-label {
+    display: block;
+    margin-bottom: rem(10px);
+    color: $dark-grayish-cyan;
+  }
+
+  &-btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(12px);
+
+    & button {
+      transition: all 0.2s;
+      &:hover {
+        background-color: lighten($very-dark-cyan, 10%);
+      }
+    }
+  }
+}
+
+.btn {
+  background-color: $very-dark-cyan;
+  color: $very-light-grayish-cyan;
+
+  padding: rem(10px) rem(18px);
+  border-radius: rem(6px);
+
+  &--custom {
+    background-color: $very-light-grayish-cyan;
+    color: $grayish-cyan;
+  }
+
+  &--active {
+    background-color: $light-grayish-cyan;
+    color: $very-dark-cyan;
+
+    &:hover {
+      background-color: lighten($light-grayish-cyan, 5%) !important;
+    }
+  }
+}
+
+.calculation {
+  background-color: $very-dark-cyan;
+  padding: rem(50px) rem(40px);
+  display: flex;
+  flex-direction: column;
+  gap: rem(50px);
+  border-radius: rem(10px);
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: rem(34px);
+    color: $Strong-cyan;
+  }
+
+  &__btn {
+    background-color: $grayish-cyan;
+    color: $very-dark-cyan;
+    margin-top: auto;
+
+    padding: rem(14px) 0;
+    border-radius: 6px;
+
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $light-grayish-cyan;
+      color: $very-dark-cyan;
+    }
+  }
+}
+
+.label__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-error {
+    display: none;
+    color: #fb4646;
+    font-size: rem(13px);
+  }
+}
+
+*:focus {
+  outline: 2px solid $Strong-cyan;
+}

@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+body {
+  font-family: "Space Mono", sans-serif;
+  line-height: 1.1;
+  min-height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+  display: grid;
+  place-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+#num-people,
+#bill-amount {
+  outline: 1px solid hsl(185, 41%, 84%);
+}
+
+.heading__secondary {
+  color: hsl(189, 41%, 97%);
+  font-size: 1rem;
+}
+.heading__secondary span {
+  color: hsl(184, 14%, 56%);
+  font-size: 0.875rem;
+}
+
+label {
+  color: hsl(186, 14%, 43%);
+}
+
+.container {
+  max-width: 81.25rem;
+  margin: 0 auto;
+  background-color: hsl(0, 0%, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.375rem;
+  padding: 2.5rem;
+  border-radius: 1.375rem;
+}
+
+.tip__input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.875rem;
+  position: relative;
+}
+.tip__input-box input {
+  background-color: hsl(189, 41%, 97%);
+  padding: 0.625rem;
+  border-radius: 6px;
+  text-align: right;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.tip__custom {
+  width: 6.25rem;
+  text-align: center;
+  background-color: hsl(189, 41%, 97%);
+  border-radius: 6px;
+}
+
+.tip__input-container__icon {
+  height: 1rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.7rem;
+}
+
+.tip__btn-box {
+  margin-bottom: 3.375rem;
+}
+.tip__btn-box-label {
+  display: block;
+  margin-bottom: 0.625rem;
+  color: hsl(186, 14%, 43%);
+}
+.tip__btn-box-btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+.tip__btn-box-btns button {
+  transition: all 0.2s;
+}
+.tip__btn-box-btns button:hover {
+  background-color: #007980;
+}
+
+.btn {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(189, 41%, 97%);
+  padding: 0.625rem 1.125rem;
+  border-radius: 0.375rem;
+}
+.btn--custom {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(184, 14%, 56%);
+}
+.btn--active {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+.btn--active:hover {
+  background-color: #d7edee !important;
+}
+
+.calculation {
+  background-color: hsl(183, 100%, 15%);
+  padding: 3.125rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  border-radius: 0.625rem;
+}
+.calculation__box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.125rem;
+  color: hsl(172, 67%, 45%);
+}
+.calculation__btn {
+  background-color: hsl(184, 14%, 56%);
+  color: hsl(183, 100%, 15%);
+  margin-top: auto;
+  padding: 0.875rem 0;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.calculation__btn:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+
+.label__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.label__container-error {
+  display: none;
+  color: #fb4646;
+  font-size: 0.8125rem;
+}
+
+*:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}

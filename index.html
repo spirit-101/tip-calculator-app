@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form class="tip__form">
+          <div class="tip__input-box">
+            <label for="bill-amount">Bill</label>
+            <div class="tip__input-container">
+              <img
+                class="tip__input-container__icon"
+                src="images/icon-dollar.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <input
+                id="bill-amount"
+                type="number"
+                placeholder="0"
+                name="bill-amount"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="tip__btn-box">
+            <span class="tip__btn-box-label">Select Tip %</span>
+            <div class="tip__btn-box-btns">
+              <button class="btn" type="button" data-tip-value="0.05">
+                5%
+              </button>
+              <button class="btn" type="button" data-tip-value="0.1">
+                10%
+              </button>
+              <button class="btn" type="button" data-tip-value="0.15">
+                15%
+              </button>
+              <button class="btn" type="button" data-tip-value="0.25">
+                25%
+              </button>
+              <button class="btn" type="button" data-tip-value="0.5">
+                50%
+              </button>
+              <input
+                class="tip__custom"
+                type="text"
+                placeholder="Custom"
+                name="custom-tip"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="tip__input-box">
+            <div class="tip__input-container">
+              <img
+                class="tip__input-container__icon"
+                src="images/icon-person.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="label__container">
+                <label for="num-people">Number of People</label>
+                <span class="label__container-error">Can't be zero</span>
+              </div>
+            </div>
+            <input
+              id="num-people"
+              type="number"
+              placeholder="0"
+              name="num-people"
+              required
+            />
+          </div>
+        </form>
+
+        <div class="calculation">
+          <div class="calculation__box">
+            <h2 class="heading__secondary">
+              Tip Amount <br />
+              <span>/ person</span>
+            </h2>
+            <h3 class="heading__tertiary calculation__amount">$0.00</h3>
+          </div>
+
+          <div class="calculation__box">
+            <h2 class="heading__secondary">
+              Total <br />
+              <span>/ person</span>
+            </h2>
+            <h3 class="heading__tertiary calculation__total">$0.00</h3>
+          </div>
+
+          <button class="calculation__btn" type="button">Reset</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
